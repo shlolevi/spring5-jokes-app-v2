@@ -5,8 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.print.DocFlavor;
-
+/**
+ * Created by jt on 1/23/21.
+ */
 @Controller
 public class JokeController {
 
@@ -17,7 +18,8 @@ public class JokeController {
     }
 
     @RequestMapping({"/", ""})
-    public String showJoke(Model model){
+    public String showJoke(Model model) {
+
         model.addAttribute("joke", jokeService.getJoke());
 
         return "index";
